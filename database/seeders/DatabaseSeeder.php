@@ -10,11 +10,13 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Crear usuario administrador
-        User::create([
-            'name' => 'Administrador',
-            'email' => 'admin@hotel.com',
-            'password' => Hash::make('Admin123'), // ⚠️ Cambia esta contraseña
-        ]);
+        // Crear usuario administrador solo si no existe
+        User::firstOrCreate(
+            ['email' => 'admin@hotel.com'],
+            [
+                'name' => 'Administrador',
+                'password' => Hash::make('Admin123'),
+            ]
+        );
     }
 }
