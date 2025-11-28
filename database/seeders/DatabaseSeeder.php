@@ -12,10 +12,10 @@ class DatabaseSeeder extends Seeder
     {
         // Crear usuario administrador solo si no existe
         User::firstOrCreate(
-            ['email' => 'admin@hotel.com'],
+            ['email' => 'admin@hotel.test'],
             [
-                'name' => 'Administrador',
-                'password' => Hash::make('Admin123'),
+                'name' => 'Admin Hotel',
+                'password' => bcrypt('12345678'),
             ]
         );
     }
