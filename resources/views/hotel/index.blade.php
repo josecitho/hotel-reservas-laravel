@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotel Miramar Demo</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body style="background:#f3f4f6; min-height:100vh; margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
 
